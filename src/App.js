@@ -31,6 +31,7 @@ const App = () => {
         userInfo={userInfo}
         handleChangeLanguage={handleChangeLanguage}
         handleSetUserInfo={setUserInfo}
+        setUserInfo={setUserInfo}
         logout={logout}
         pageName={pageName}
         lang={lang}
@@ -52,7 +53,6 @@ const App = () => {
         return <Login setUserInfo={setUserInfo} lang={lang} />
       }}>
       </Route>
-
       <Footer lang={lang} />
     </BrowserRouter>
   );

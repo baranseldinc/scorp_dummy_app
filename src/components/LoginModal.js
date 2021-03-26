@@ -1,29 +1,22 @@
+import Modal from 'react-bootstrap/Modal'
+import Button from 'react-bootstrap/Button'
+const LoginModal = (props) => (
 
-const LoginModal = (props) => {
-    if (true) {
-        $('#myModal').modal('toggle');
-        props.closeModal();
-    }
-    return (
-        <div id="myModal" className="modal" tabIndex="-1" role="dialog">
-            <div className="modal-dialog" role="document">
-                <div className="modal-content">
-                    <div className="modal-header">
-                        <h5 className="modal-title">Modal title</h5>
-                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div className="modal-body">
-                        <p>Modal body text goes here.</p>
-                    </div>
-                    <div className="modal-footer">
-                        <button type="button" className="btn btn-primary">Save changes</button>
-                        <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
-}
+    <Modal.Dialog show={props.showLoginModal} onHide={props.handleCloseModal}>
+        <Modal.Header closeButton>
+            <Modal.Title>Modal title</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+            <p>Modal body text goes here.</p>
+        </Modal.Body>
+
+        <Modal.Footer>
+            <Button variant="secondary">Close</Button>
+            <Button variant="primary">Save changes</Button>
+        </Modal.Footer>
+    </Modal.Dialog>
+
+);
+
 export default LoginModal;
