@@ -1,0 +1,40 @@
+main {
+  position: relative;
+  min-height: 400px;
+}
+.bg-image{
+  background: url(https://wallpaperaccess.com/full/35646.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  filter: blur(6px);
+  -webkit-filter: blur(6px);
+}
+
+.valid-feedback {
+  font-weight: bold;
+}
+
+.non-valid-feedback {
+  width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #ff0000;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(180, 171, 171) !important;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: rgb(180, 171, 171) !important;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: rgb(180, 171, 171) !important;
+}
